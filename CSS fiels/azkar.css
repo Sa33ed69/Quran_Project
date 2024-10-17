@@ -1,0 +1,178 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  position: relative;
+}
+.img-container img {
+  height: 40px;
+  margin-left: 40px;
+  outline: none;
+}
+.navbar {
+  background: linear-gradient(to right, #363082, #435575);
+}
+.nav-link {
+  font-size: 1rem;
+  margin-right: 20px;
+}
+
+.main {
+  padding-bottom: 4%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #241f63, #435575);
+}
+
+.main h2 {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 4rem;
+  font-family: "AMIRI";
+  padding-bottom: 6%;
+  padding-top: 10%;
+}
+
+.main h2::before,
+.main h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: white;
+  margin: 0 auto;
+  width: 50%;
+}
+.btn {
+  color: red;
+}
+.btn-group {
+  background-color: #b5cc94;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 70%;
+  overflow: hidden;
+  height: 6%;
+  align-items: center;
+  border-radius: 6px;
+}
+.btn-group a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+.btn-group a:hover {
+  color: #241f63;
+  transition: 0.5s ease-in-out;
+}
+.main h2::before {
+  margin-bottom: 30px;
+}
+
+.main h2::after {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 755px) {
+  .main {
+    padding-bottom: 18%;
+  }
+  h5 {
+    font-size: 13px;
+  }
+  .btn-group {
+    width: 100%;
+  }
+  .btn-group a {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .ds h6 {
+    font-size: 14px;
+  }
+  .ds h5 {
+    font-size: 14px;
+  }
+  .ds h3 {
+    font-size: 17px;
+    word-spacing: 1px;
+    line-height: 2;
+  }
+  .main h2::before,
+  .main h2::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: white;
+    margin: 0 auto;
+    width: 30%;
+  }
+  .main h2::before {
+    margin-bottom: 30px;
+  }
+
+  .main h2::after {
+    margin-top: 20px;
+  }
+
+  .main h2 {
+    font-size: 24px;
+    padding-top: 100px;
+  }
+  .btn h5 {
+    color: red;
+    font-size: 14px;
+  }
+
+  #surah-name {
+    font-size: 13px;
+
+    padding-top: 3px;
+    overflow: hidden;
+  }
+
+  body {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 756px) and (max-width: 980px) {
+  .main {
+    padding-bottom: 7%;
+  }
+}
+.main #cont {
+  color: aliceblue;
+}
+
+/* the latest version */
+
+.ds h6,
+h5,
+h3 {
+  font-style: italic;
+}
+.ds {
+  margin: 3% auto;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  width: 70%;
+  border: 5px solid #bad496;
+  border-radius: 20px;
+}
+.ds h3 {
+  padding: 0px 15px;
+  padding-top: 45px;
+  text-align: center;
+  word-spacing: 1px;
+  line-height: 2;
+
+  font-weight: 400;
+}
+.ds h5 {
+  position: absolute;
+  right: 0;
+  padding: 6px 20px;
+  opacity: 0.8;
+}
+.ds h6 {
+  padding: 2px 40px;
+  opacity: 0.8;
+}

@@ -1,0 +1,174 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  position: relative;
+}
+.img-container img {
+  height: 40px;
+  margin-left: 40px;
+}
+.navbar {
+  background: linear-gradient(to right, #363082, #435575);
+}
+
+.left h2 {
+  height: auto;
+  backdrop-filter: blur(50px);
+  color: aliceblue;
+  font-family: "AMIRI";
+  font-weight: 900;
+  margin-top: 20%;
+  padding-top: 22px;
+  text-align: center;
+  font-size: 70px;
+}
+.home {
+  height: 100svh;
+  background-image: url("ahmed-sherif-OQYWr1YaJ50-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.nav-link {
+  font-size: 1rem;
+  margin-right: 20px;
+}
+
+.left h2 {
+  font-style: italic;
+  font-size: 3rem;
+}
+.home2 {
+  height: auto;
+  background: linear-gradient(to right, #1e3e62, #435575);
+}
+.home2 .card {
+  margin: auto;
+  margin-bottom: 10%;
+  margin-top: 10%;
+
+  outline: none;
+  border: none;
+}
+
+.home2 .card2 {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.home2 .card1 {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.home2 .card3 {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.home2 .card4 {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.home2 .card3 img {
+  height: auto;
+  width: auto;
+}
+
+.home2 .card1,
+.home2 .card2,
+.home2 .card3,
+.home2 .card4 {
+  background-color: #4a4947;
+  color: white;
+
+  width: 18rem;
+}
+.home2 .card-text {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+.home2 .card-title {
+  font-size: 18px;
+}
+.sd {
+  height: 10svh;
+  background: linear-gradient(to right, #1e3e62, #435575);
+}
+.home2 h3 {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+.home2 h3::before,
+.home2 h3::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: white;
+  margin: 0 auto;
+  width: 20%;
+}
+
+.home2 h3::before {
+  margin-bottom: 7px;
+}
+
+.home2 h3::after {
+  margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  .home2 .card {
+    width: 90%;
+  }
+
+  .home2 h3 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .home2 .card {
+    margin: 20px 0;
+    width: 80%;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    height: auto;
+  }
+
+  .left h2 {
+    font-size: 40px;
+  }
+
+  .home2 h3 {
+    font-size: 40px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home2 .card {
+    width: 100%;
+  }
+
+  .home2 h3 {
+    font-size: 30px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .left h2 {
+    font-size: 30px;
+  }
+}

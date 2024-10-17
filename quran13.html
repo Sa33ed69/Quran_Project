@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="quran13.css" />
+    <link rel="icon" href="Group 1.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>HEDAYA</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar thisnav fixed-top">
+      <div class="container-fluid img-container">
+        <a class="navbar-brand" href="#"><img src="Group 1.png" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="radio.html"
+                >إذاعه الراديو</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="azkar.html"
+                >الأذكار</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="tafser.html"
+                >التفسير</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="shek.html"
+                >القرآن الكريم</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="Home.html"
+                >الصفحه الرئيسية</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="main">
+      <div class="container">
+        <h2 class="text-center my-4">الشيخ صلاح بوخاطر</h2>
+        <label class="label">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="بحث"
+            class="form-control mb-4"
+          />
+        </label>
+        <div class="row">
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn1">
+              <h5 class="text-white" id="h1">سورة الفاتحة</h5>
+            </button>
+          </div>
+
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn2">
+              <h5 class="text-white" id="h2">سورة البقرة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn3">
+              <h5 class="text-white" id="h3">سورة آل عمران</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn4">
+              <h5 class="text-white" id="h4">سورة النساء</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn5">
+              <h5 class="text-white" id="h5">سورة المائدة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn6">
+              <h5 class="text-white" id="h6">سورة الأنعام</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn7">
+              <h5 class="text-white" id="h7">سورة الأعراف</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn8">
+              <h5 class="text-white" id="h8">سورة الأنفال</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn9">
+              <h5 class="text-white" id="h9">سورة التوبة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn10">
+              <h5 class="text-white" id="h10">سورة يونس</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn11">
+              <h5 class="text-white" id="h11">سورة هود</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn12">
+              <h5 class="text-white" id="h12">سورة يوسف</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn13">
+              <h5 class="text-white" id="h13">سورة الرعد</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn14">
+              <h5 class="text-white" id="h14">سورة إبراهيم</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn15">
+              <h5 class="text-white" id="h15">سورة الحجر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn16">
+              <h5 class="text-white" id="h16">سورة النحل</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn17">
+              <h5 class="text-white" id="h17">سورة الإسراء</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn18">
+              <h5 class="text-white" id="h18">سورة الكهف</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn19">
+              <h5 class="text-white" id="h19">سورة مريم</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn20">
+              <h5 class="text-white" id="20">سورة طه</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn21">
+              <h5 class="text-white" id="h21">سورة الأنبياء</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn22">
+              <h5 class="text-white" id="h22">سورة الحج</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn23">
+              <h5 class="text-white" id="h23">سورة المؤمنون</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn24">
+              <h5 class="text-white" id="h24">سورة النور</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn25">
+              <h5 class="text-white" id="h25">سورة الفرقان</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn26">
+              <h5 class="text-white" id="h26">سورة الشعراء</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn27">
+              <h5 class="text-white" id="h27">سورة النمل</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn28">
+              <h5 class="text-white" id="h28">سورة القصص</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn29">
+              <h5 class="text-white" id="h29">سورة العنكبوت</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn30">
+              <h5 class="text-white" id="h30">سورة الروم</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn31">
+              <h5 class="text-white" id="h31">سورة لقمان</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn32">
+              <h5 class="text-white" id="h32">سورة السجدة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn33">
+              <h5 class="text-white" id="h33">سورة الأحزاب</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn34">
+              <h5 class="text-white" id="h34">سورة سبأ</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn35">
+              <h5 class="text-white" id="h35">سورة فاطر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn36">
+              <h5 class="text-white" id="h36">سورة يس</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn37">
+              <h5 class="text-white" id="h37">سورة الصافات</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn38">
+              <h5 class="text-white" id="h38">سورة ص</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn39">
+              <h5 class="text-white" id="h39">سورة الزمر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn40">
+              <h5 class="text-white" id="h40">سورة غافر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn41">
+              <h5 class="text-white" id="h41">سورة فصلت</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn42">
+              <h5 class="text-white" id="h42">سورة الشورى</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn43">
+              <h5 class="text-white" id="h43">سورة الزخرف</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn44">
+              <h5 class="text-white" id="h44">سورة الدخان</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn45">
+              <h5 class="text-white" id="h45">سورة الجاثية</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn46">
+              <h5 class="text-white" id="h46">سورة الأحقاف</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn47">
+              <h5 class="text-white" id="h47">سورة محمد</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn48">
+              <h5 class="text-white" id="h48">سورة الفتح</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn49">
+              <h5 class="text-white" id="h49">سورة الحجرات</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn50">
+              <h5 class="text-white" id="h50">سورة ق</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn51">
+              <h5 class="text-white" id="h51">سورة الذاريات</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn52">
+              <h5 class="text-white" id="h52">سورة الطور</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn53">
+              <h5 class="text-white" id="h53">سورة النجم</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn54">
+              <h5 class="text-white" id="h54">سورة القمر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn55">
+              <h5 class="text-white" id="h55">سورة الرحمن</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn56">
+              <h5 class="text-white" id="h56">سورة الواقعة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn57">
+              <h5 class="text-white" id="h57">سورة الحديد</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn58">
+              <h5 class="text-white" id="h58">سورة المجادلة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn59">
+              <h5 class="text-white" id="h59">سورة الحشر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn60">
+              <h5 class="text-white" id="h60">سورة الممتحنة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn61">
+              <h5 class="text-white" id="h61">سورة الصف</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn62">
+              <h5 class="text-white" id="h62">سورة الجمعة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn63">
+              <h5 class="text-white" id="h63">سورة المنافقون</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn64">
+              <h5 class="text-white" id="h64">سورة التغابن</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn65">
+              <h5 class="text-white" id="h65">سورة الطلاق</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn66">
+              <h5 class="text-white" id="h66">سورة التحريم</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn67">
+              <h5 class="text-white" id="h67">سورة الملك</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn68">
+              <h5 class="text-white" id="h68">سورة القلم</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn69">
+              <h5 class="text-white" id="h69">سورة الحاقة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn70">
+              <h5 class="text-white" id="h70">سورة المعارج</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn71">
+              <h5 class="text-white" id="h71">سورة نوح</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn72">
+              <h5 class="text-white" id="h72">سورة الجن</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn73">
+              <h5 class="text-white" id="h73">سورة المزمل</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn74">
+              <h5 class="text-white" id="h74">سورة المدثر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn75">
+              <h5 class="text-white" id="h75">سورة القيامة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn76">
+              <h5 class="text-white" id="h76">سورة الإنسان</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn77">
+              <h5 class="text-white" id="h77">سورة المرسلات</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn78">
+              <h5 class="text-white" id="h78">سورة النبأ</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn79">
+              <h5 class="text-white" id="h79">سورة النازعات</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn80">
+              <h5 class="text-white" id="h80">سورة عبس</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn81">
+              <h5 class="text-white" id="h81">سورة التكوير</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn82">
+              <h5 class="text-white" id="h82">سورة الإنفطار</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn83">
+              <h5 class="text-white" id="h83">سورة المطففين</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn84">
+              <h5 class="text-white" id="h84">سورة الإنشقاق</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn85">
+              <h5 class="text-white" id="h85">سورة البروج</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn86">
+              <h5 class="text-white" id="h86">سورة الطارق</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn87">
+              <h5 class="text-white" id="h87">سورة الأعلى</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn88">
+              <h5 class="text-white" id="h88">سورة الغاشية</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn89">
+              <h5 class="text-white" id="h89">سورة الفجر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn90">
+              <h5 class="text-white" id="h90">سورة البلد</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn91">
+              <h5 class="text-white" id="h91">سورة الشمس</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn92">
+              <h5 class="text-white" id="h92">سورة الليل</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn93">
+              <h5 class="text-white" id="h93">سورة الضحى</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn94">
+              <h5 class="text-white" id="h94">سورة الشرح</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn95">
+              <h5 class="text-white" id="h95">سورة التين</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn96">
+              <h5 class="text-white" id="h96">سورة العلق</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn97">
+              <h5 class="text-white" id="h97">سورة القدر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn98">
+              <h5 class="text-white" id="h98">سورة البينة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn99">
+              <h5 class="text-white" id="h99">سورة الزلزلة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn100">
+              <h5 class="text-white" id="h100">سورة العاديات</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn101">
+              <h5 class="text-white" id="h101">سورة القارعة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn102">
+              <h5 class="text-white" id="h102">سورة التكاثر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn103">
+              <h5 class="text-white" id="h103">سورة العصر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn104">
+              <h5 class="text-white" id="h104">سورة الهمزة</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn105">
+              <h5 class="text-white" id="h105">سورة الفيل</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn106">
+              <h5 class="text-white" id="h106">سورة قريش</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn107">
+              <h5 class="text-white" id="h107">سورة الماعون</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn108">
+              <h5 class="text-white" id="h108">سورة الكوثر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn109">
+              <h5 class="text-white" id="h109">سورة الكافرون</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn110">
+              <h5 class="text-white" id="h110">سورة النصر</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn111">
+              <h5 class="text-white" id="h111">سورة المسد</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn112">
+              <h5 class="text-white" id="h112">سورة الإخلاص</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn113">
+              <h5 class="text-white" id="h113">سورة الفلق</h5>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 mb-3">
+            <button class="btn" id="btn114">
+              <h5 class="text-white" id="h114">سورة الناس</h5>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="audio fixed-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="audio-player">
+                <h5 id="surah-name"></h5>
+                <audio id="quran-audio" controls preload="none"></audio>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="quran13.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
