@@ -11,7 +11,29 @@
 .navbar {
   background: linear-gradient(to right, #363082, #435575);
 }
-
+footer {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #183453, #394b69);
+}
+footer .a a {
+  text-decoration: none;
+  color: white;
+  margin: 0px 10px;
+  font-size: 25px;
+}
+footer a:hover {
+  color: #b7ca9e;
+  transition: 0.3s ease-in-out;
+}
+footer .p {
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+}
 .left h2 {
   height: auto;
   backdrop-filter: blur(50px);
@@ -25,7 +47,7 @@
 }
 .home {
   height: 100svh;
-  background-image: url("ahmed-sherif-OQYWr1YaJ50-unsplash.jpg");
+  background-image: url("compressed_ahmed-sherif-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
