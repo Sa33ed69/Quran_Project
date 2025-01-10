@@ -3,7 +3,7 @@ async function fetchSurahAudio() {
 
   for (let surahId = 1; surahId <= 114; surahId++) {
     const response = await fetch(
-      `https://api.quran.com/api/v4/chapter_recitations/1`
+      `https://api.quran.com/api/v4/chapter_recitations/9`
     );
 
     const data = await response.json();

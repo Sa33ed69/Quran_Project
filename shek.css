@@ -71,10 +71,6 @@
   margin-top: 20px;
 }
 @media only screen and (max-width: 755px) {
-  .main {
-    padding-bottom: 18%;
-  }
-
   h5 {
     font-size: 13px;
   }
@@ -86,11 +82,14 @@
     font-size: 28px;
     padding-top: 100px;
   }
-  .btn h5 {
-    color: red;
+  .main button {
+    width: 100%;
+    margin: 5% auto;
+    padding: 5% 0%;
+  }
+  .btn .text-white {
     font-size: 14px;
   }
-
   #surah-name {
     font-size: 13px;
     padding-top: 10px;
@@ -99,10 +98,5 @@
 
   body {
     font-size: 16px;
-  }
-}
-@media only screen and (min-width: 756px) and (max-width: 980px) {
-  .main {
-    padding-bottom: 7%;
   }
 }

@@ -220,10 +220,13 @@
     padding-top: 100px;
   }
   .btn h5 {
-    color: red;
     font-size: 14px;
   }
 
+  .main button {
+    width: 100%;
+    margin: 5% auto;
+  }
   #surah-name {
     font-size: 13px;
     padding-top: 3px;

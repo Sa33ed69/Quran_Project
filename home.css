@@ -11,21 +11,44 @@
 .navbar {
   background: linear-gradient(to right, #363082, #435575);
 }
-
+footer {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #183453, #394b69);
+}
+footer .a a {
+  text-decoration: none;
+  color: white;
+  margin: 0px 10px;
+  font-size: 25px;
+}
+footer a:hover {
+  color: #b7ca9e;
+  transition: 0.3s ease-in-out;
+}
+footer .p {
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+}
 .left h2 {
   height: auto;
   backdrop-filter: blur(50px);
   color: aliceblue;
   font-family: "AMIRI";
-  font-weight: 900;
+  font-weight: 500;
   margin-top: 20%;
   padding-top: 22px;
   text-align: center;
-  font-size: 70px;
+  font-style: italic;
+  font-size: 3rem;
 }
 .home {
   height: 100svh;
-  background-image: url("ahmed-sherif-OQYWr1YaJ50-unsplash.jpg");
+  background-image: url("compressed_ahmed-sherif-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -36,10 +59,6 @@
   margin-right: 20px;
 }
 
-.left h2 {
-  font-style: italic;
-  font-size: 3rem;
-}
 .home2 {
   height: auto;
   background: linear-gradient(to right, #1e3e62, #435575);
@@ -118,7 +137,7 @@
 
 @media (max-width: 1200px) {
   .home2 .card {
-    width: 90%;
+    width: 50%;
   }
 
   .home2 h3 {
@@ -127,13 +146,14 @@
 }
 
 @media (max-width: 992px) {
-  .home2 .card {
-    margin: 20px 0;
-    width: 80%;
+  footer .p {
+    font-size: 14px;
   }
-
   .nav-link {
     font-size: 1.2rem;
+  }
+  footer .a a {
+    font-size: 20px;
   }
 }
 
@@ -157,11 +177,12 @@
 
 @media (max-width: 576px) {
   .home2 .card {
-    width: 100%;
+    width: 90%;
   }
 
   .home2 h3 {
-    font-size: 30px;
+    font-size: 25px;
+    padding-top: 50px;
   }
 
   .nav-link {
@@ -169,6 +190,9 @@
   }
 
   .left h2 {
-    font-size: 30px;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 600;
+    border-radius: 10px;
   }
 }

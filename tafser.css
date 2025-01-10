@@ -217,16 +217,33 @@
     padding-top: 100px;
   }
   .btn h5 {
-    color: red;
     font-size: 14px;
   }
 
+  .main button {
+    width: 100%;
+    margin: 5% auto;
+  }
   #surah-name {
     font-size: 13px;
     text-overflow: ellipsis;
     white-space: nowrap;
     padding-top: 10px;
     overflow: hidden;
+  }
+  .fa-solid {
+    font-size: 13px;
+    margin-top: 15px;
+  }
+  .label {
+    margin-left: 70%;
+    width: 30%;
+  }
+  #searchInput::placeholder {
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 13px;
   }
 
   body {
