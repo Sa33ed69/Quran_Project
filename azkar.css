@@ -59,6 +59,7 @@
   text-decoration: none;
   color: white;
   font-size: 18px;
+  padding: 6px;
 }
 .btn-group a:hover {
   color: #241f63;
