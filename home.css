@@ -9,7 +9,7 @@
   margin-left: 40px;
 }
 .navbar {
-  background: linear-gradient(to right, #363082, #435575);
+  background-color: #272f33;
 }
 footer {
   height: auto;
@@ -17,7 +17,7 @@ footer {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  background: linear-gradient(to right, #183453, #394b69);
+  background-color: #272f33;
 }
 footer .a a {
   text-decoration: none;
@@ -26,7 +26,7 @@ footer .a a {
   font-size: 25px;
 }
 footer a:hover {
-  color: #b7ca9e;
+  color: #0dcaf0;
   transition: 0.3s ease-in-out;
 }
 footer .p {
@@ -34,21 +34,22 @@ footer .p {
   font-size: 20px;
   margin-top: 10px;
 }
-.left h2 {
+/* .left h2 {
   height: auto;
-  backdrop-filter: blur(50px);
-  color: aliceblue;
+  backdrop-filter: blur(5px);
+  color: white;
+  line-height: 1.5;
   font-family: "AMIRI";
-  font-weight: 500;
+  font-weight: 900;
   margin-top: 20%;
   padding-top: 22px;
   text-align: center;
   font-style: italic;
   font-size: 3rem;
-}
+} */
 .home {
   height: 100svh;
-  background-image: url("compressed_ahmed-sherif-unsplash.jpg");
+  background-image: url("pexels-ramiardilshad-26436656-min.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -61,7 +62,7 @@ footer .p {
 
 .home2 {
   height: auto;
-  background: linear-gradient(to right, #1e3e62, #435575);
+  background-color: #1f2125;
 }
 .home2 .card {
   margin: auto;
@@ -71,18 +72,27 @@ footer .p {
   outline: none;
   border: none;
 }
+.home2 .custom-button {
+  background-color: #1f2629;
+  color: white;
+}
+.home2 .custom-button:hover {
+  background-color: #0dcaf0;
+  color: black;
+  transition: 0.5s ease-in-out;
+}
 
 .home2 .card2 {
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px rgba(23, 198, 235, 0.1);
 }
 .home2 .card1 {
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px rgba(23, 198, 235, 0.1);
 }
 .home2 .card3 {
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px rgba(23, 198, 235, 0.1);
 }
 .home2 .card4 {
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px rgba(23, 198, 235, 0.1);
 }
 .home2 .card3 img {
   height: auto;
@@ -93,7 +103,7 @@ footer .p {
 .home2 .card2,
 .home2 .card3,
 .home2 .card4 {
-  background-color: #4a4947;
+  background-color: #272f33;
   color: white;
 
   width: 18rem;
@@ -141,6 +151,7 @@ footer .p {
   }
 
   .home2 h3 {
+    padding-top: 10%;
     font-size: 50px;
   }
 }
@@ -159,7 +170,9 @@ footer .p {
 
 @media (max-width: 768px) {
   .home {
-    height: auto;
+    height: 90svh;
+    background-size: cover;
+    background-position: center;
   }
 
   .left h2 {
@@ -187,12 +200,5 @@ footer .p {
 
   .nav-link {
     font-size: 0.9rem;
-  }
-
-  .left h2 {
-    font-size: 25px;
-    line-height: 30px;
-    font-weight: 600;
-    border-radius: 10px;
   }
 }

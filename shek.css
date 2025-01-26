@@ -9,7 +9,7 @@
   margin-left: 40px;
 }
 .navbar {
-  background: linear-gradient(to right, #363082, #435575);
+  background-color: #272f33;
 }
 .nav-link {
   font-size: 1rem;
@@ -18,7 +18,13 @@
 
 .main {
   height: auto;
-  background: linear-gradient(to right, #241f63, #435575);
+  background-image: url("islam-muslim-svgrepo-com.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #1f2125;
+  background-attachment: fixed;
 }
 .main h2 {
   text-align: center;
@@ -38,12 +44,6 @@
   background-color: #a5b68d;
   border-radius: 20px;
 }
-
-.main button:hover {
-  background-color: #bad496;
-  transition: 0.3s ease-in-out;
-}
-
 .main button a {
   display: block;
   padding: 5% 5%;
@@ -51,6 +51,15 @@
   color: white;
   font-size: 18px;
   font-weight: 500;
+}
+.main .custom-button {
+  background-color: #1f2125;
+  border: 2px solid #367d8b;
+  box-shadow: 0px 0px 15px rgba(23, 198, 235, 0.1);
+}
+.main .custom-button:hover {
+  background-color: #1097b1;
+  transition: 0.3s ease-in-out;
 }
 
 .main h2::before,
@@ -74,7 +83,7 @@
   h5 {
     font-size: 13px;
   }
-  .main .text-white {
+  .main .t1 {
     font-size: 14px;
   }
 
@@ -87,13 +96,8 @@
     margin: 5% auto;
     padding: 5% 0%;
   }
-  .btn .text-white {
+  .btn .t1 {
     font-size: 14px;
-  }
-  #surah-name {
-    font-size: 13px;
-    padding-top: 10px;
-    overflow: hidden;
   }
 
   body {

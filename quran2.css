@@ -9,7 +9,7 @@
   margin-left: 40px;
 }
 .navbar {
-  background: linear-gradient(to right, #363082, #435575);
+  background-color: #272f33;
 }
 .nav-link {
   font-size: 1rem;
@@ -19,7 +19,13 @@
 .main {
   padding-bottom: 6%;
   min-height: 100vh;
-  background: linear-gradient(to right, #241f63, #435575);
+  background-color: #1f2125;
+  background-image: url("islam-muslim-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-attachment: fixed;
+  background-size: contain;
+  padding-bottom: 10%;
 }
 
 .main h2 {
@@ -30,27 +36,26 @@
   padding-bottom: 6%;
   padding-top: 10%;
 }
-.main button {
+.main .custom-button {
   margin-left: 15%;
   padding: 1rem;
   margin-top: 2rem;
-  border: none;
+  border: 2px solid #367d8b;
   width: 70%;
   outline: none;
-  background-color: #a5b68d;
+  background-color: #1f2629;
+  color: white;
   border-radius: 20px;
 }
-.main button:hover {
-  background-color: #bad496;
-  transition: 0.3s ease-in-out;
+.main .custom-button:hover {
+  background-color: #0dcaf0;
+  color: black;
+  transition: 0.5s ease-in-out;
 }
-.main button a {
-  text-decoration: none;
-  color: white;
+.main .t1 {
   font-size: 18px;
   font-weight: 500;
 }
-
 .main h2::before,
 .main h2::after {
   content: "";
@@ -69,45 +74,109 @@
   margin-top: 20px;
 }
 
-#quran-audio {
-  width: 100%;
-  background-color: whitesmoke;
-  height: 70px;
-  padding-top: 3%;
-  padding-bottom: 8px;
-  border-radius: 10px;
-}
-.audio-player #surah-name {
-  position: absolute;
-  z-index: 1;
+#surah-name {
   margin-left: 46%;
-  margin-top: 0.5%;
   opacity: 0.8;
+  color: white;
 }
-.audio-player {
-  width: 70%;
+
+.surah-slider {
+  margin-bottom: 2%;
+}
+.seek-bar {
+  width: 100%;
+  position: absolute;
+}
+
+.seek-bar {
+  position: absolute;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #367d8b;
+  cursor: pointer;
+  overflow: hidden;
+}
+.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1px;
+  height: 20px;
+  background: #000;
+  box-shadow: -650px 0 0 650px #0dcaf0;
+}
+.current-time,
+.surah-duration-time {
+  font-size: 14px;
+  position: absolute;
+  color: white;
+  padding-top: 1%;
+}
+.surah-duration-time {
+  right: 0;
+}
+.audio {
+  padding-bottom: 0%;
+  background-color: black;
+  width: 80%;
+  margin: auto;
+  border-radius: 2%;
+}
+.controls {
+  position: relative;
+  border-radius: 20%;
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin: auto;
+  margin-bottom: 1%;
+}
+.play-btn {
+  width: 45px;
+  height: 45px;
+  outline: none;
+  border-radius: 50%;
+  background-color: #367d8b;
+  cursor: pointer;
+  border: none;
   margin: auto;
 }
-#surah-name {
-  animation: moveAnimation 10s infinite;
+.play-btn span {
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  transform: translate(-50%);
+  width: 10px;
+  height: 25px;
+  border-radius: 2px;
+  background-color: white;
+  transition: 0.5s;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.play-btn span:nth-child(2) {
+  left: 65%;
+  transform-origin: center;
+}
 
-  /* 
-  padding-right: 20%; */
+.play-btn.pause span:nth-child(2) {
+  transform: translateY(-50%) scaleY(0);
 }
-@keyframes moveAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.play-btn.pause span:nth-child(1) {
+  top: auto;
+  width: 35%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  border-radius: 0px;
+  clip-path: polygon(0 0, 100% 50%, 100% 50%, 0 100%);
 }
-.audio-player {
-  position: relative;
+
+.backward-btn .fa-solid {
+  left: 25px;
 }
+.forward-btn .fa-solid {
+  right: 0px;
+}
+
 #searchInput {
   width: 100%;
   direction: rtl;
@@ -171,7 +240,7 @@
   opacity: 0.8;
 }
 #searchInput:focus {
-  border-bottom: 2px solid #a5b68d;
+  border-bottom: 2px solid #367d8b;
   transition: 0.4s ease-in-out;
 }
 .fa-solid {
@@ -197,7 +266,7 @@
   .main {
     padding-bottom: 18%;
   }
-  .audio-player {
+  .audio {
     width: 100%;
   }
   .fa-solid {
@@ -211,7 +280,7 @@
   #searchInput::placeholder {
     font-size: 14px;
   }
-  h5 {
+  .t1 {
     font-size: 13px;
   }
 
@@ -219,26 +288,35 @@
     font-size: 28px;
     padding-top: 100px;
   }
-  .btn h5 {
+  .btn .t1 {
     font-size: 14px;
   }
-  .main button {
+  .main .custom-button {
     width: 100%;
     margin: 5% auto;
   }
-
+  .play-btn {
+    width: 37px;
+    height: 37px;
+    margin-left: 27px;
+  }
+  .play-btn span {
+    width: 7px;
+    height: 13px;
+  }
+  .seek-bar {
+    top: 0;
+  }
+  .surah-slider {
+    padding-top: 2%;
+  }
   #surah-name {
     font-size: 13px;
-    padding-top: 3px;
+    margin-top: 2%;
   }
 
   body {
     font-size: 16px;
-  }
-}
-@media only screen and (min-width: 756px) and (max-width: 980px) {
-  .main {
-    padding-bottom: 7%;
   }
 }
 

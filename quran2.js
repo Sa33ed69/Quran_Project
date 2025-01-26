@@ -1,5 +1,59 @@
+const audioPlayer = document.getElementById("audio");
+const seekbar = document.querySelector(".seek-bar");
+const surahnamereal = document.querySelector("#surah-name");
+const currenttime = document.querySelector(".current-time");
+const surahtime = document.querySelector(".surah-duration-time");
+const nextbtn = document.querySelector(".forward-btn");
+const backbtn = document.querySelector(".backward-btn");
+const playbtn = document.querySelector(".play-btn");
+
+playbtn.addEventListener("click", function () {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+  } else {
+    audioPlayer.pause();
+  }
+});
+
+audioPlayer.addEventListener("play", function () {
+  playbtn.classList.add("playing");
+  playbtn.classList.remove("pause");
+});
+
+audioPlayer.addEventListener("pause", function () {
+  playbtn.classList.remove("playing");
+  playbtn.classList.add("pause");
+});
+
+audioPlayer.addEventListener("timeupdate", function () {
+  const currentMinutes = Math.floor(audioPlayer.currentTime / 60);
+  const currentSeconds = Math.floor(audioPlayer.currentTime % 60);
+  const durationMinutes = Math.floor(audioPlayer.duration / 60);
+  const durationSeconds = Math.floor(audioPlayer.duration % 60);
+
+  currenttime.textContent = `${currentMinutes}:${currentSeconds
+    .toString()
+    .padStart(2, "0")}`;
+  surahtime.textContent = `${durationMinutes}:${durationSeconds
+    .toString()
+    .padStart(2, "0")}`;
+
+  const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+  seekbar.value = progress;
+});
+seekbar.addEventListener("input", function () {
+  const seekTime = (seekbar.value / 100) * audioPlayer.duration;
+  audioPlayer.currentTime = seekTime;
+});
+function loadSurah(index) {
+  const surah = surahs[index];
+  audioPlayer.src = surah.url;
+  surahnamereal.textContent = surah.name;
+  audioPlayer.load();
+}
+
 async function fetchSurahAudio() {
-  const audioPlayer = document.getElementById("quran-audio");
+  const audioPlayer = document.getElementById("audio");
 
   for (let surahId = 1; surahId <= 114; surahId++) {
     const response = await fetch(

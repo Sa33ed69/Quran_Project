@@ -1,46 +1,58 @@
-// async function lll() {
-//   const city = "Cairo";
-//   const country = "Egypt";
-//   const method = 8;
-//   const today = new Date();
-//   const date = `${today.getDate()}-${
-//     today.getMonth() + 1
-//   }-${today.getFullYear()}`;
-//   const response = await fetch(
-//     `https://api.aladhan.com/v1/timingsByCity/${date}?city=${city}&country=${country}&method=${method}`
-//   );
-//   const data = await response.json();
-//   const container = document.querySelector("#ff");
+const audioPlayer = document.getElementById("audio");
+const seekbar = document.querySelector(".seek-bar");
+const surahnamereal = document.querySelector("#surah-name");
+const currenttime = document.querySelector(".current-time");
+const surahtime = document.querySelector(".surah-duration-time");
+const nextbtn = document.querySelector(".forward-btn");
+const backbtn = document.querySelector(".backward-btn");
+const playbtn = document.querySelector(".play-btn");
 
-//   const timings = data.data.timings;
-//   const div = 12;
+playbtn.addEventListener("click", function () {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+  } else {
+    audioPlayer.pause();
+  }
+});
 
-//   document.getElementById("fajr").innerText = `Fajr: ${timings.Fajr}`;
-//   document.getElementById("dhuhr").innerText = `Dhuhr: ${timings.Dhuhr}`;
-//   document.getElementById("asr").innerText = `Asr: ${
-//     parseFloat(timings.Asr) - div
-//   }`;
-//   document.getElementById("maghrib").innerText = `Maghrib: ${
-//     parseFloat(timings.Maghrib) - div
-//   }`;
-//   document.getElementById("isha").innerText = `Isha: ${
-//     parseFloat(timings.Isha) - div
-//   }`;
-//   document.getElementById(
-//     "date"
-//   ).innerText = `today is: ${data.data.date.readable}`;
-//   document.getElementById(
-//     "day"
-//   ).innerText = `day is: ${data.data.date.hijri.weekday.ar}`;
-// }
-// function ll() {
-//   lll();
-//   setInterval(lll, 86400000);
-// }
-// ll();
+audioPlayer.addEventListener("play", function () {
+  playbtn.classList.add("playing");
+  playbtn.classList.remove("pause");
+});
 
+audioPlayer.addEventListener("pause", function () {
+  playbtn.classList.remove("playing");
+  playbtn.classList.add("pause");
+});
+
+audioPlayer.addEventListener("timeupdate", function () {
+  const currentMinutes = Math.floor(audioPlayer.currentTime / 60);
+  const currentSeconds = Math.floor(audioPlayer.currentTime % 60);
+  const durationMinutes = Math.floor(audioPlayer.duration / 60);
+  const durationSeconds = Math.floor(audioPlayer.duration % 60);
+
+  currenttime.textContent = `${currentMinutes}:${currentSeconds
+    .toString()
+    .padStart(2, "0")}`;
+  surahtime.textContent = `${durationMinutes}:${durationSeconds
+    .toString()
+    .padStart(2, "0")}`;
+
+  const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+  seekbar.value = progress;
+});
+seekbar.addEventListener("input", function () {
+  const seekTime = (seekbar.value / 100) * audioPlayer.duration;
+  audioPlayer.currentTime = seekTime;
+});
+function loadSurah(index) {
+  const surah = surahs[index];
+  audioPlayer.src = surah.url;
+  surahnamereal.textContent = surah.name;
+  audioPlayer.load();
+}
 async function radio() {
-  const audioPlayer = document.getElementById("quran-audio");
+  const audioPlayer = document.getElementById("audio");
   const response = await fetch("https://data-rosy.vercel.app/radio.json");
   const data = await response.json();
   const h1 = document.getElementById("h1");

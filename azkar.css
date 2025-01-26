@@ -10,7 +10,7 @@
   outline: none;
 }
 .navbar {
-  background: linear-gradient(to right, #363082, #435575);
+  background-color: #272f33;
 }
 .nav-link {
   font-size: 1rem;
@@ -18,16 +18,20 @@
 }
 
 .main {
-  padding-bottom: 4%;
   min-height: 100vh;
-  background: linear-gradient(to right, #241f63, #435575);
+  background-color: #1f2125;
+  background-image: url("islam-muslim-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-attachment: fixed;
+  background-size: contain;
+  padding-bottom: 3%;
 }
 
 .main h2 {
   text-align: center;
   color: whitesmoke;
-  font-size: 4rem;
-  font-family: "AMIRI";
+  font-size: 3rem;
   padding-bottom: 6%;
   padding-top: 10%;
 }
@@ -41,11 +45,9 @@
   margin: 0 auto;
   width: 50%;
 }
-.btn {
-  color: red;
-}
+
 .btn-group {
-  background-color: #b5cc94;
+  background-color: #367d8b;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -62,7 +64,7 @@
   padding: 6px;
 }
 .btn-group a:hover {
-  color: #241f63;
+  color: #272f33;
   transition: 0.5s ease-in-out;
 }
 .main h2::before {
@@ -123,7 +125,6 @@
     padding-top: 100px;
   }
   .btn h5 {
-    color: red;
     font-size: 14px;
   }
 
@@ -149,16 +150,11 @@
 
 /* the latest version */
 
-.ds h6,
-h5,
-h3 {
-  font-style: italic;
-}
 .ds {
   margin: 3% auto;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   width: 70%;
-  border: 5px solid #bad496;
+  border: 5px solid #367d8b;
   border-radius: 20px;
 }
 .ds h3 {
@@ -166,8 +162,7 @@ h3 {
   padding-top: 45px;
   text-align: center;
   word-spacing: 1px;
-  line-height: 2;
-
+  line-height: 2.2;
   font-weight: 400;
 }
 .ds h5 {
