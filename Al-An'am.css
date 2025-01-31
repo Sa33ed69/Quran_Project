@@ -33,7 +33,7 @@
   font-size: 2.2rem;
 }
 .read {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
   height: auto;
   width: 60%;
   text-align: right;
@@ -41,6 +41,7 @@
   padding: 0px 20px;
   margin: 0px auto;
   margin-top: 30px;
+  font-weight: 200;
 }
 
 .surah-name {
@@ -59,7 +60,7 @@
   font-size: 26px;
   padding: 15px 0px;
   font-weight: 800;
-
+  opacity: 0.9;
   width: fit-content;
   line-height: 1.9;
 }
@@ -86,7 +87,7 @@
     width: 95%;
   }
   .content p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
   }
   .surah-name {
