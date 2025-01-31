@@ -41,7 +41,6 @@
   padding: 0px 20px;
   margin: 0px auto;
   margin-top: 30px;
-  font-weight: 200;
 }
 
 .surah-name {
@@ -49,6 +48,7 @@
   text-align: center;
   margin: 20px 20px;
   font-size: 2rem;
+  opacity: 0.9;
   font-weight: 800;
 }
 .content {
@@ -57,9 +57,9 @@
   direction: rtl;
   text-align: justify;
   margin-left: 10px;
-  font-size: 26px;
+  font-size: 24px;
   padding: 15px 0px;
-  font-weight: 800;
+  font-weight: 500;
   opacity: 0.9;
   width: fit-content;
   line-height: 1.9;
@@ -67,7 +67,7 @@
 .verse-number {
   font-size: 1rem;
   padding: 5px;
-  color: #19c0c0;
+  color: #19c0c0; /* Orange color for the verse number */
 }
 
 .s2 {
@@ -94,7 +94,7 @@
     font-size: 1.5rem;
   }
   .content {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 2.1;
     font-weight: 700;
   }
