@@ -97,6 +97,7 @@
   .content {
     font-size: 19px;
     line-height: 2.1;
+    word-spacing: 0px;
     opacity: 0.9;
     font-weight: 700;
   }
