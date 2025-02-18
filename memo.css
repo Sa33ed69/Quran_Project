@@ -1,0 +1,107 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  position: relative;
+}
+.img-container img {
+  height: 40px;
+  margin-left: 40px;
+}
+.navbar {
+  background-color: #272f33;
+}
+.nav-link {
+  font-size: 1rem;
+  margin-right: 20px;
+}
+
+.main {
+  height: auto;
+  background-image: url("islam-muslim-svgrepo-com.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #1f2125;
+  background-attachment: fixed;
+  height: 100svh;
+}
+.main h2 {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 4rem;
+  font-family: "AMIRI";
+  padding-bottom: 6%;
+  padding-top: 12%;
+}
+.main button {
+  margin-left: 15%;
+  padding: 0.2rem;
+  margin-top: 2rem;
+  border: none;
+  width: 70%;
+  outline: none;
+  background-color: #a5b68d;
+  border-radius: 20px;
+}
+.main button a {
+  display: block;
+  padding: 5% 5%;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+.main .custom-button {
+  background-color: #1f2125;
+  border: 2px solid #367d8b;
+  box-shadow: 0px 0px 15px rgba(23, 198, 235, 0.1);
+}
+.main .custom-button:hover {
+  background-color: #1097b1;
+  transition: 0.3s ease-in-out;
+}
+
+.main h2::before,
+.main h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: white;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.main h2::before {
+  margin-bottom: 30px;
+}
+
+.main h2::after {
+  margin-top: 20px;
+}
+@media only screen and (max-width: 755px) {
+  h5 {
+    font-size: 13px;
+  }
+  .main .t1 {
+    font-size: 14px;
+  }
+
+  .main h2 {
+    font-size: 28px;
+    padding-top: 100px;
+  }
+  .main button {
+    width: 100%;
+    margin: 5% auto;
+    padding: 5% 0%;
+  }
+  .btn .t1 {
+    font-size: 14px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+}
