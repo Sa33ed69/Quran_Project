@@ -1,18 +1,30 @@
 const quranContent = document.getElementsByClassName("content");
 
 async function getQuranContent() {
-  const response = await fetch(
-    "https://raw.githubusercontent.com/risan/quran-json/refs/heads/main/data/quran.json"
-  );
-  const data = await response.json();
+  try {
+    const response = await fetch(
+      "https://quran-json.risanb.com/text/uthmani/chapters/2.json"
+    );
 
-  const chapter1 = data["2"];
+    if (!response.ok) {
+      throw new Error(`HTTP Error: ${response.status}`);
+    }
 
-  Array.from(quranContent).forEach((content) => {
-    content.innerHTML = "";
-    chapter1.forEach((n) => {
-      content.innerHTML += `<span class="verse">${n.text}</span><span class="verse-number"> (${n.verse})</span> `;
+    const data = await response.json();
+    const verses = data.verses;
+
+    Array.from(quranContent).forEach((content) => {
+      content.innerHTML = "";
+
+      verses.forEach((verse) => {
+        content.innerHTML +=
+          `<span class="verse">${verse.text}</span>` +
+          `<span class="verse-number"> (${verse.id})</span> `;
+      });
     });
-  });
+  } catch (error) {
+    console.error("Error loading Quran content:", error);
+  }
 }
+
 getQuranContent();
