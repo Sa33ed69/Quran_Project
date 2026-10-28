@@ -4,8 +4,7 @@ import re
 import shutil
 
 # The folder containing this Python script and your website files
-PROJECT_DIR = Path(__file__).resolve().parent
-
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 # Keep a backup of the original JavaScript files
 BACKUP_DIR = PROJECT_DIR / "quran_js_backup"
 BACKUP_DIR.mkdir(exist_ok=True)
