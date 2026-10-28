@@ -1,0 +1,47 @@
+
+name: Fix Quran API V2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-quran:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show repository files
+        run: |
+          echo "Repository root:"
+          pwd
+          echo "GitHub directory:"
+          ls -la .github
+          echo "Scripts directory:"
+          find .github -maxdepth 4 -type f -print
+
+      - name: Run fixer if present
+        run: |
+          if [ -f ".github/scripts/fix-quran-files.js" ]; then
+            node ".github/scripts/fix-quran-files.js"
+          else
+            echo "Fixer not found at .github/scripts/fix-quran-files.js"
+            exit 1
+          fi
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.js'
+
+          if git diff --cached --quiet; then
+            echo "No files needed updating."
+          else
+            git commit -m "Fix Quran API URLs in surah files"
+            git push
+          fi
