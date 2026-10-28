@@ -43,9 +43,12 @@ for (const file of fs.readdirSync(root)) {
   if (file.toLowerCase() === "qurancontent.js") continue;
 
   const surahName = path.basename(file, ".js");
-  const surahNumber = surahs.findIndex(
-    name => name.toLowerCase() === surahName.toLowerCase()
-  ) + 1;
+ const normalize = (name) =>
+  name.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+const surahNumber = surahs.findIndex(
+  name => normalize(name) === normalize(surahName)
+) + 1;
 
   if (surahNumber < 1) {
     console.log(`Skipped: ${file} (name not mapped)`);
